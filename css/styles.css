@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300&display=swap');
+
+
+
+
+body {
+    /*font-family: 'Roboto Serif', sans-serif;*/
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;          
+    font-weight: 900 !important;
+}
+
+a {
+    text-decoration: none;  
+    transition: all 0.7s, ease;
+    -webkit-transition: all 0.7s, ease; 
+    font-weight: 800;
+}
+
+  
+
+section {
+    padding-top:80px;        
+    padding-bottom:80px;       
+    z-index: 2; 
+    position: relative;
+}
+
+.hero-section {
+
+    min-height: 100vh;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-cover {
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;      
+    background-attachment: fixed; 
+}
+.btn {
+    padding: 14px 22px;
+    transition: all 0.7s ease;
+}
+
+.btn-one {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+  --bs-btn-bg: linear-gradient(rgba(23, 170, 255, 0.240), rgba(28, 7, 216,0.6220));
+}
+.btn-one span {
+  transition: all 0.3s;
+  color: #FFF;
+
+}
+.btn-one::before {
+  content: '>>';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-left-color: rgba(255, 255, 255, 0.5);
+  border-right-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  color: #FFF;
+
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+  color: #FFF;
+
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+  color: #FFF;
+
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background: linear-gradient(rgba(23, 170, 255, 0.240), rgba(28, 7, 216,0.4220));
+  z-index: -1;
+  color: #FFF;
+
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+  color: #FFF;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;        
+    height: 100%;
+    background: linear-gradient(rgba(23, 170, 255, 0.240), rgba(28, 7, 216,0.6220));
+    z-index: -1;
+}
+
+.navbar {
+    box-shadow: 0, 12px, 20px, rgba(0, 0, 0, 0.1);
+}
